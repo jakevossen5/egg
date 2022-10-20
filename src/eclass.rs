@@ -56,12 +56,12 @@ impl<L: Language, D> EClass<L, D> {
     {
         let mut leaves = self.leaves();
         if let Some(first) = leaves.next() {
-            assert!(
-                leaves.all(|l| l == first),
-                "Different leaves in eclass {}: {:?}",
-                self.id,
-                self.leaves().collect::<crate::util::HashSet<_>>()
-            );
+            // assert!(
+            //     leaves.all(|l| l == first),
+            //     "Different leaves in eclass {}: {:?}",
+            //     self.id,
+            //     self.leaves().collect::<crate::util::HashSet<_>>()
+            // );
         }
     }
 }
